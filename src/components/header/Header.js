@@ -1,8 +1,43 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { Link } from 'react-scroll';
 
 import './Header.css'
 
 const Header = () => {
+
+    const [scrollData, setScrollData] = useState({
+        y: 0,
+        lastY: 0,
+    });
+
+    const [showNav, setShowNav] = useState();
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setScrollData(prevState => {
+                return {
+                    y: window.scrollY,
+                    lastY: prevState.y
+                }
+            })
+        }
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
+    useEffect(() => {
+        // if (scrollData.y > 500) {
+        //     setShowNav(true)
+        // } else {
+        //     setShowNav(false)
+        // }
+
+        if (scrollData.y > 150 && scrollData.y - scrollData.lastY > 0) {
+            setShowNav(true)
+        } else {
+            setShowNav(false)
+        }
+    }, [scrollData])
 
     const [isOpen, setIsOpen] = useState(false);
     const [hideOrSwow, setHideOrShow] = useState({});
@@ -23,7 +58,7 @@ const Header = () => {
     }
 
     return (
-        <header className='header'>
+        <header className={showNav ? 'header hideHeader' : 'header'}>
             {isOpen ? <div className='header_burger open' onClick={handleMenu}>
                 <div className='header_bar'></div>
             </div> : <div className='header_burger' onClick={handleMenu}>
@@ -31,14 +66,14 @@ const Header = () => {
             </div>}
             
             <div className='header_container'>
-                <nav className='header_nav' style={hideOrSwow}>
+                <nav className='header_nav' style={hideOrSwow} onClick={handleMenu}>
                     <div>
                         Logo
                     </div>
                     <ul className='header_navlist'>
-                        <li className='header_navlink'>Опыт работы</li>
-                        <li className='header_navlink'>О себе</li>
-                        <li className='header_navlink'>Портфолио</li>
+                        <Link to='experience' className='header_navlink' onClick={handleMenu}>Опыт работы</Link>
+                        <Link className='header_navlink' onClick={handleMenu}>О себе</Link>
+                        <Link className='header_navlink' onClick={handleMenu}>Портфолио</Link>
                     </ul>
                         <button className='header_button'>контакты</button>
                 </nav>
