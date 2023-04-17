@@ -32,6 +32,7 @@
     color: var(--color-light);
     padding: 15px 30px;
     border-radius: 40px;
+    z-index: 1000;
 }
 
 .hero_img {

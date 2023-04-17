@@ -11,7 +11,7 @@ import Service from './components/service/Service';
 function App() {
   return (
     <div className="App wrapper">
-      <Header />
+      {/* <Header /> */}
       <Hero />
       <Experience />
       <Service />
