@@ -28,7 +28,7 @@
 .hero_button {
     display: flex;
     align-items: center;
-    background: var(--blue-gradient);
+    background: #25D366;
     color: var(--color-light);
     padding: 15px 30px;
     border-radius: 40px;

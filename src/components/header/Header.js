@@ -75,7 +75,7 @@ const Header = () => {
                         <Link className='header_navlink' onClick={handleMenu}>О себе</Link>
                         <Link className='header_navlink' onClick={handleMenu}>Портфолио</Link>
                     </ul>
-                        <button className='header_button'>контакты</button>
+                        <a href="tel:+996500273222"><button className='header_button'>контакты</button></a> 
                 </nav>
             </div>
         </header>
