@@ -9,7 +9,9 @@ const Hero = () => {
                 <div className="hero_items">
                     <p className="hero_text">Максат Токталиев</p>
                     <h1 className="hero_title">Меня зовут Максат.<br/> Я начинающий<br/> front-end разработчик.</h1>
-                    <a href='https://wa.me/996500273222' target='_blank' rel='noreferrer' className='hero_button'><AiOutlineWhatsApp style={{fontSize: '20px'}}/>&nbsp;написать</a>
+                    <a href='https://api.whatsapp.com/send?phone=996500273222' target='_blank' rel='noreferrer'>
+                        <button className='hero_button'><AiOutlineWhatsApp style={{fontSize: '20px'}}/>&nbsp;написать</button>
+                        </a>
                 </div>
                 <div className="hero_img">
                     <img src={image} alt="" />
