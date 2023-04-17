@@ -12,6 +12,7 @@ const Hero = () => {
                     <a href='https://api.whatsapp.com/send?phone=996500273222' target='_blank' rel='noreferrer'>
                         <button className='hero_button'><AiOutlineWhatsApp style={{fontSize: '20px'}}/>&nbsp;написать</button>
                         </a>
+                        <a href="https://api.whatsapp.com/send?phone=996500273222">message</a>
                 </div>
                 <div className="hero_img">
                     <img src={image} alt="" />
