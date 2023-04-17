@@ -1,7 +1,8 @@
 .header {
+    width: 100%;
     background: #F9F9FC;
     position: relative;
-    position: sticky;
+    position: fixed;
     top: 0;
     transition: transform 0.7s ease-out ;
 }
@@ -103,7 +104,7 @@
 
     .header_bar {
         position: relative;
-        width: 32px;
+        width: 27px;
         height: 2px;
         background: var(--color-dark);
     }
@@ -118,12 +119,12 @@
     }
     
     .header_bar::before {
-        width: 32px;
+        width: 27px;
         transform: translateY(-8px);
     }
     
     .header_bar::after {
-        width: 32px;
+        width: 27px;
         transform: translateY(8px);
     }
 
@@ -133,12 +134,12 @@
     }
     
     .header_burger.open .header_bar::before {
-        width: 32px;
+        width: 27px;
         transform: rotate(45deg) translate(26px, -26px);
     }
     
     .header_burger.open .header_bar::after {
-        width: 32px;
+        width: 27px;
         transform: rotate(-45deg) translate(26px, 26px);
     }
 

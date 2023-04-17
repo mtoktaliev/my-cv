@@ -33,6 +33,7 @@ a{color:inherit;}
 body {
     font-family: 'Open Sans', sans-serif;
     background: var(--color-light);
+	color: var(--color-dark);
 }
 
 .wrapper {

@@ -10,7 +10,7 @@ import Service from './components/service/Service';
 
 function App() {
   return (
-    <div className="App">
+    <div className="App wrapper">
       <Header />
       <Hero />
       <Experience />
