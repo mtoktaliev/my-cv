@@ -25,17 +25,38 @@
     margin-bottom: 30px;
 }
 
-.hero_button {
+.hero_title span {
+    color: var(--color-blue);
+}
+
+.hero_buttons {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+
+.hero_wabutton {
     display: flex;
     align-items: center;
     background: #25D366;
     color: var(--color-light);
     padding: 15px 30px;
     border-radius: 40px;
-    z-index: 1000;
+    transition: all 0.3s ease-in;
 }
 
-.hero_img {
-    background-attachment: fixed;
+.hero_wabutton:hover {
+    background: #21be5b;
+}
+
+.hero_dlbutton {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    opacity: 0.8;
+}
+
+.hero_dlbutton:hover {
+    opacity: 1;
 }
 
