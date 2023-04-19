@@ -1,0 +1,16 @@
+.experience {
+    background-color: var(--color-gray);
+}
+
+.experience_container {
+    max-width: 1250px;
+    padding: 25px;
+    margin: 0 auto;
+}
+
+.experience_title {
+    font-size: 24px;
+    font-weight: 900;
+    text-align: center;
+    margin-bottom: 30px;
+}

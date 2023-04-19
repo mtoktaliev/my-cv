@@ -22,6 +22,7 @@ a{color:inherit;}
 :root {
 	--color-blue: #105BFB;
 	--color-light: #fff;
+	--color-gray: #F9F9FC;
 	--color-dark: #333;
 	--blue-gradient: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
 

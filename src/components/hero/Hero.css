@@ -1,14 +1,15 @@
 .hero {
-    min-height: 100vh;
+    
 }
 
 .hero_container {
+    min-height: 100vh;
     display: flex;
     justify-content: space-between;
     align-items: center;
     max-width: 1250px;
     padding: 0 25px;
-    margin: 60px auto;
+    margin: 0 auto;
 }
 
 .hero_text {
@@ -54,9 +55,58 @@
     align-items: center;
     font-weight: 500;
     opacity: 0.8;
+    white-space: nowrap;
 }
 
 .hero_dlbutton:hover {
     opacity: 1;
+}
+
+.hero_img img {
+    background-position: bottom;
+}
+
+@media (max-width: 992px) {
+
+
+}
+
+@media (max-width: 768px) {
+
+ 
+
+    .hero_container {
+        flex-direction: column;
+        padding-top: 150px;
+    }
+
+    .hero_text {
+        text-align: center;
+    }
+
+    .hero_title {
+        font-size: 26px;
+        text-align: center;
+    }
+
+    .hero_buttons {
+        gap: 30px;
+        flex-direction: column;
+    }
+
+    .hero_img {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .hero_img img {
+        width: 100%;
+    }
+}
+
+@media (max-width: 576px) {
+
+
 }
 

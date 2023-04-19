@@ -1,10 +1,11 @@
 .header {
     width: 100%;
-    background: #F9F9FC;
+    background: var(--color-gray);
     position: relative;
     position: fixed;
     top: 0;
-    transition: transform 0.7s ease-out ;
+    transition: transform 0.7s ease-out;
+    z-index: 1;
 }
 
 .header.hideHeader {
