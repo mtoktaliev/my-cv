@@ -1,7 +1,7 @@
 
 import './App.css'
 import About from './components/about/About';
-import Experience from './components/experience/Experience';
+import Skills from './components/skills/Skills';
 import Footer from './components/footer/Footer';
 import Header from './components/header/Header';
 import Hero from './components/hero/Hero';
@@ -13,7 +13,7 @@ function App() {
     <div className="App wrapper">
       <Header />
       <Hero />
-      <Experience />
+      <Skills />
       <Service />
       <About />
       <Portfolio />

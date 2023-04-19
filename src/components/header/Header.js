@@ -71,7 +71,7 @@ const Header = () => {
                         Logo
                     </div>
                     <ul className='header_navlist'>
-                        <Link to='experience' className='header_navlink' onClick={handleMenu}>Опыт работы</Link>
+                        <Link to='skills' smooth={true} className='header_navlink' onClick={handleMenu}>Навыки</Link>
                         <Link className='header_navlink' onClick={handleMenu}>О себе</Link>
                         <Link className='header_navlink' onClick={handleMenu}>Портфолио</Link>
                     </ul>
