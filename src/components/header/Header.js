@@ -1,7 +1,9 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
+import classNames from 'classnames';
+import { BiHome } from 'react-icons/bi'
 
-import './Header.css'
+import styles from './Header.module.css'
 
 const Header = () => {
 
@@ -26,11 +28,6 @@ const Header = () => {
     }, [])
 
     useEffect(() => {
-        // if (scrollData.y > 500) {
-        //     setShowNav(true)
-        // } else {
-        //     setShowNav(false)
-        // }
 
         if (scrollData.y > 150 && scrollData.y - scrollData.lastY > 0) {
             setShowNav(true)
@@ -45,37 +42,35 @@ const Header = () => {
     const handleMenu = () => {
         setIsOpen((prev) => !prev)
         if(isOpen) {
-            document.body.classList.remove('body_hidden')
+            document.body.classList.remove(styles.body_hidden)
             setHideOrShow(() => {
                 return {}
             })
         } else {
             setHideOrShow(() => {
-                document.body.classList.add('body_hidden')
+                document.body.classList.add(styles.body_hidden)
                 return {transform: 'translateX(0)'}
             })
         }
     }
 
     return (
-        <header className={showNav ? 'header hideHeader' : 'header'}>
-            {isOpen ? <div className='header_burger open' onClick={handleMenu}>
-                <div className='header_bar'></div>
-            </div> : <div className='header_burger' onClick={handleMenu}>
-                <div className='header_bar'></div>
+        <header className={showNav ? classNames(styles.section, styles.hideSection) : styles.section}>
+            {isOpen ? <div className={classNames(styles.burger, styles.open)} onClick={handleMenu}>
+                <div className={styles.bar}></div>
+            </div> : <div className={styles.burger} onClick={handleMenu}>
+                <div className={styles.bar}></div>
             </div>}
             
-            <div className='header_container'>
-                <nav className='header_nav' style={hideOrSwow} onClick={handleMenu}>
-                    <div>
-                        Logo
-                    </div>
-                    <ul className='header_navlist'>
-                        <Link to='skills' smooth={true} className='header_navlink' onClick={handleMenu}>Навыки</Link>
-                        <Link className='header_navlink' onClick={handleMenu}>О себе</Link>
-                        <Link className='header_navlink' onClick={handleMenu}>Портфолио</Link>
+            <div className={styles.container}>
+                <nav className={styles.nav} style={hideOrSwow} onClick={handleMenu}>
+                        <Link to='hero' smooth={true}><BiHome className={styles.home} onClick={handleMenu} /></Link>
+                    <ul className={styles.navlist}>
+                        <Link to='skills' smooth={true} className={styles.navlink} onClick={handleMenu}>Навыки</Link>
+                        <Link className={styles.navlink} onClick={handleMenu}>О себе</Link>
+                        <Link className={styles.navlink} onClick={handleMenu}>Портфолио</Link>
                     </ul>
-                        <button className='header_button'>контакты</button>
+                        <button className={styles.button}>контакты</button>
                 </nav>
             </div>
         </header>

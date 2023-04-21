@@ -1,6 +1,9 @@
-.skills {
-    background-color: #000;
-    height: 700px;
+.section {
+    background: #000;
+    background-image: url('../../assets/images/laptop.png');
+    background-repeat: no-repeat;
+    background-position: center bottom;
+    height: 100vh;
     position: relative;
 }
 
@@ -10,35 +13,35 @@
     left: 50%;
     transform: translate(-50%, -50%);
     overflow:hidden;
-    font-size: 60px;
+    font-size: 40px;
     line-height: 70px;
-    color: #ecf0f1;
+    color: var(--color-light);
 }
 
-.content_container {
+.container {
     font-weight: 600;
     overflow: hidden;
     height: 70px;
-    padding: 0 40px;
+    padding: 0 30px;
 }
 
-.content_container:before {
+.container:before {
     content: '[';
     left: 0;
   }
 
-.content_container:after {
+.container:after {
     content: ']';
     position: absolute;
     right: 0;
 }
 
-.content_container:after, .content_container:before {
+.container:after, .container:before {
     position: absolute;
     top: 0;
     
-    color: #16a085;
-    font-size: 60px;
+    color: var(--color-blue);
+    font-size: 40px;
     line-height: 70px;
     
     animation-name: opacity;
@@ -46,15 +49,15 @@
     animation-iteration-count: infinite;
 }
 
-.content_container_text {
+.text {
     display: inline;
     float: left;
     margin: 0;
 }
 
-.content_container_list {
+.list {
     margin-top: 0;
-    padding-left: 300px;
+    padding-left: 200px;
     text-align: left;
     list-style: none;
     white-space: nowrap;
@@ -67,7 +70,7 @@
     animation-iteration-count: infinite;
 }
 
-.content_container_item {
+.item {
     line-height: 70px;
     margin: 0;
 }
@@ -89,23 +92,23 @@
 
   @media (max-width: 768px) {
 
-    .experience {
-        height: 350px;
+    .section {
+        background-image: none;
     }
 
     .content {
         font-size: 28px;
     }
     
-    .content_container {
+    .container {
         padding: 0 20px;
     }
 
-    .content_container_list {
+    .list {
         padding-left: 130px;
     }
 
-    .content_container:after, .content_container:before {
+    .container:after, .container:before {
         font-size: 35px;
     }
 

@@ -6,7 +6,7 @@ import { HiOutlineDownload } from 'react-icons/hi'
 
 const Hero = () => {
     return (
-        <section className='hero'>
+        <section className='hero' id='hero'>
             <div className="hero_container">
                 <div className="hero_items">
                     <p className="hero_text">Максат Токталиев</p>
