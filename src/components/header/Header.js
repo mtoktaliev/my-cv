@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Link } from 'react-scroll';
 import classNames from 'classnames';
-import { BiHome } from 'react-icons/bi'
+import { AiTwotoneHome } from 'react-icons/ai'
 
 import styles from './Header.module.css'
 
@@ -64,7 +64,7 @@ const Header = () => {
             
             <div className={styles.container}>
                 <nav className={styles.nav} style={hideOrSwow} onClick={handleMenu}>
-                        <Link to='hero' smooth={true}><BiHome className={styles.home} onClick={handleMenu} /></Link>
+                        <Link to='hero' smooth={true}><AiTwotoneHome className={styles.home} onClick={handleMenu} /></Link>
                     <ul className={styles.navlist}>
                         <Link to='skills' smooth={true} className={styles.navlink} onClick={handleMenu}>Навыки</Link>
                         <Link className={styles.navlink} onClick={handleMenu}>О себе</Link>
