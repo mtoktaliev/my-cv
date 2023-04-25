@@ -88,28 +88,14 @@
     gap: 20px;
     border-radius: 8px;
     padding: 30px;
+    font-weight: 100;
   }
 
   .desc {
     color: aliceblue;
   }
 
-  .animation {
-    opacity: 0;
-    transform: translateY(20px);
-}
-
-.animation.show {
-    opacity: 1;
-    transition: all 1s;
-    transform: translateY(0%);
-}
-
   @media (max-width: 768px) {
-
-    .section {
-        background-image: none;
-    }
 
     .content {
         font-size: 28px;

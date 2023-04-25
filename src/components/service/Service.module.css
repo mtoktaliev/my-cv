@@ -1,0 +1,16 @@
+.container {
+    display: flex;
+    gap: 10px;
+    padding: 10px 0;
+}
+.blockGray {
+    min-width: 50vw;
+    min-height: 500px;
+    background: var(--color-gray);
+}
+
+.blockBlack {
+    min-width: 50vw;
+    min-height: 500px;
+    background: #000;
+}

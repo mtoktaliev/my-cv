@@ -21,8 +21,9 @@ a{color:inherit;}
 
 :root {
 	--color-blue: #105BFB;
+	--color-green: #25D366;
 	--color-light: #fff;
-	--color-gray: #F9F9FC;
+	--color-gray: #f5f5f7;
 	--color-dark: #333;
 	--blue-gradient: linear-gradient(90.13deg, #105BFB 0.1%, #5061FF 134.04%);
 
@@ -42,3 +43,14 @@ body {
 	width: 100%;
 	overflow: hidden;
 }
+
+.progress-bar {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 3px;
+	background: #727272;
+	border-radius: 5px;
+	transform-origin: 0%;
+  }
